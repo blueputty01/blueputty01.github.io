@@ -10,7 +10,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Hey! I'm blueputty01, and this is my website. Take a look around!</p>
+        <p>Welcome!</p>
       </section>
       {/* <Link href="first-post">
         <a>Test page</a>

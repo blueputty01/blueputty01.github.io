@@ -35,6 +35,10 @@ export default function Blog({ postMetadata, postContent }) {
         <title>{postMetadata.title}</title>
       </Head>
       <div className="blog-content">
+        <h1>{postMetadata.title}</h1>
+        <p>
+          <i>Last updated {postMetadata.date}</i>
+        </p>
         <MDXRemote {...postContent} components={components} />
       </div>
 
