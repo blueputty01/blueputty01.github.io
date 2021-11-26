@@ -26,8 +26,8 @@ export default function Layout({ children, home }) {
             <img
               src="/images/profile.png"
               className={utilStyles.borderCircle}
-              height={144}
-              width={144}
+              height={100}
+              width={100}
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
@@ -39,19 +39,19 @@ export default function Layout({ children, home }) {
                 <img
                   src="/images/profile.png"
                   className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
+                  height={30}
+                  width={30}
                   alt={name}
                 />
+                <a className={utilStyles.colorInherit}>{name}</a>
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
           </>
         )}
+
+        <Link href="contact">Contact</Link>
+        <Link href="privacy">Privacy Policy</Link>
+        <Link href="terms">Terms of Service</Link>
       </header>
       <main>{children}</main>
       {!home && (
@@ -61,6 +61,9 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+      <footer>
+        Built with ♥ by blueputty01 and powered by Next.js (along with ☕)
+      </footer>
     </div>
   );
 }

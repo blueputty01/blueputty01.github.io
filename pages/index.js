@@ -12,9 +12,9 @@ export default function Home() {
       <section className={utilStyles.headingMd}>
         <p>Hey! I'm blueputty01, and this is my website. Take a look around!</p>
       </section>
-      <Link href="posts/first-post">
+      {/* <Link href="first-post">
         <a>Test page</a>
-      </Link>
+      </Link> */}
     </Layout>
   );
 }
