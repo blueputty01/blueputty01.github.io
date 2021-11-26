@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NEXT_PUBLIC_BASE_PATH: /blueputty01
+      NEXT_PUBLIC_BASE_PATH: /
 
     strategy:
       matrix:
@@ -35,3 +35,4 @@ jobs:
         with:
           branch: gh-pages
           folder: out
+          clean: true
