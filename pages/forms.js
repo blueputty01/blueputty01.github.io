@@ -56,3 +56,15 @@ export default function Blog() {
     </Layout>
   );
 }
+
+/*
+Clearly explain what your app will do with user data.
+Thoroughly describe how your app enhances user functionality.
+Contain or provide a visible link to your Privacy Policy.
+The Privacy Policy must clearly describe how your application accesses, uses, stores, or shares Google user data.
+Read the Limited Use Requirements for more information and guidance.
+Be a verified domain under your ownership.
+Be accurate, inclusive, and easily accessible to all users.
+Be on an externally & publicly accessible domain that describes the content, context, or connection to the app you are submitting.
+We can't verify your project until all the URLs can be reached and are ready for production.
+*/
