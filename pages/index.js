@@ -4,17 +4,27 @@ import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
 export default function Home() {
+  function Project({ children }) {
+    return (
+      <section>
+        <h2 className={utilStyles.headingLg}>{children}</h2>
+      </section>
+    );
+  }
+
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>Welcome!</p>
+      <p>
+        <i>This site is a work in progress. Please check back later.</i>
+      </p>
+      <section>
+        <h1 className={utilStyles.headingXl}>Gallery</h1>
+        <Project>Form Butler</Project>
+        <Project>Tabs Aside</Project>
       </section>
-      {/* <Link href="first-post">
-        <a>Test page</a>
-      </Link> */}
     </Layout>
   );
 }

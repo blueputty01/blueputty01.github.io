@@ -2,13 +2,28 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const name = "blueputty01";
 export const siteTitle = "blueputty01";
 
 export default function Layout({ children, home }) {
+  const router = useRouter();
+
   function onScroll(e) {
     console.log(e);
+  }
+
+  function ActiveLink({ children, href, className }) {
+    return (
+      <li
+        className={[router.asPath == href ? styles.active : "", className].join(
+          " "
+        )}
+      >
+        <Link href={href}>{children}</Link>
+      </li>
+    );
   }
 
   return (
@@ -28,31 +43,50 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <header className={styles.header} onScroll={onScroll}>
-        <Link href="/">
-          <a className={styles.logo}>
-            <img
-              src="/images/profile.png"
-              className={utilStyles.borderCircle}
-              height={30}
-              width={30}
-              alt={name}
-            />
-            <span className={styles.logoText}>{name}</span>
-          </a>
-        </Link>
-        <Link href="contact">
-          <a className={styles.push}>Contact</a>
-        </Link>
-        <Link href="privacy">Privacy Policy</Link>
-        <Link href="terms">Terms of Service</Link>
-        <Link href="forms">Form Octopus</Link>
+      <header onScroll={onScroll}>
+        <div className={styles.header}>
+          <ul>
+            <li>
+              <Link href="/">
+                <a className={styles.logo}>
+                  <img
+                    src="/images/profile.png"
+                    className={utilStyles.borderCircle}
+                    height={30}
+                    width={30}
+                    alt={name}
+                  />
+                  <span className={styles.logoText}>{name}</span>
+                </a>
+              </Link>
+            </li>
+            <ActiveLink href="/contact" className={styles.push}>
+              Contact
+            </ActiveLink>
+            <ActiveLink href="/privacy">Privacy</ActiveLink>
+          </ul>
+        </div>
       </header>
+      <div className={styles.fadeLeft}></div>
+      <div className={styles.fadeRight}></div>
       <main>{children}</main>
 
       <footer>
-        Built with ♥ by <Link href="github.com/blueputt01">blueputty01</Link>
-        Powered by Next.js (along with ☕)
+        <div className={styles.footerContainer}>
+          <div className={styles.col}>
+            <h5>Form Butler</h5>
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+          </div>
+          <div className={styles.col}>
+            <h5>Tabs Aside</h5>
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+          </div>
+        </div>
+        <div className={[styles.footerContainer, styles.foot].join(" ")}>
+          <p>Built with ♥ and ☕.</p>
+        </div>
       </footer>
     </div>
   );

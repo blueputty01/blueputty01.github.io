@@ -1,22 +1,39 @@
 .container {
-  max-width: 50rem;
-  margin: 1rem auto 2rem;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .header {
+  max-width: 90rem;
+  margin: auto;
+}
+
+.header > ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-.header > * {
+.header > ul > li {
+  display: inline-block;
   /* border: #000 solid 1px; */
   font-weight: 500;
+  padding: 5px 10px 5px 10px;
   color: hsl(208, 0%, 50%);
-  padding: 10px;
 }
-.header > *:hover {
+
+.header > ul > li > a {
+  font-weight: inherit;
+  color: inherit;
+}
+
+.header > ul > li > a:hover {
   text-decoration: none;
+  color: hsl(208, 0%, 20%);
 }
 
 .push {
@@ -39,4 +56,56 @@
   font-size: 1rem;
   font-weight: 800;
   letter-spacing: -0.05rem;
+}
+
+.active {
+  color: #35a2ff !important;
+}
+
+.fadeLeft {
+  /* background-color: #000; */
+  background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+  height: 2px;
+  top: 4.2rem;
+  left: 0;
+  position: fixed;
+  width: calc((100% - 80rem) / 2);
+  z-index: 505;
+}
+
+.fadeRight {
+  background-image: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+  height: 2px;
+  top: 4.2rem;
+  right: 0;
+  position: fixed;
+  width: calc((100% - 80rem) / 2);
+  z-index: 505;
+}
+
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.col > a {
+  color: inherit;
+}
+
+.col > h5 {
+  margin: 0 0 1rem 0;
+}
+
+.foot {
+  font-style: italic;
 }
