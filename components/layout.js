@@ -7,6 +7,10 @@ const name = "blueputty01";
 export const siteTitle = "blueputty01";
 
 export default function Layout({ children, home }) {
+  function onScroll(e) {
+    console.log(e);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -24,7 +28,7 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <header className={styles.header}>
+      <header className={styles.header} onScroll={onScroll}>
         <Link href="/">
           <a className={styles.logo}>
             <img
@@ -34,7 +38,7 @@ export default function Layout({ children, home }) {
               width={30}
               alt={name}
             />
-            <a className={styles.logoText}>{name}</a>
+            <span className={styles.logoText}>{name}</span>
           </a>
         </Link>
         <Link href="contact">
