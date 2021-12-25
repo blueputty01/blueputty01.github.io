@@ -25,49 +25,30 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
       </Head>
       <header className={styles.header}>
-        {home ? (
-          <>
+        <Link href="/">
+          <a className={styles.logo}>
             <img
               src="/images/profile.png"
               className={utilStyles.borderCircle}
-              height={100}
-              width={100}
+              height={30}
+              width={30}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.png"
-                  className={utilStyles.borderCircle}
-                  height={30}
-                  width={30}
-                  alt={name}
-                />
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </a>
-            </Link>
-          </>
-        )}
-
-        <Link href="contact">Contact</Link>
+            <a className={styles.logoText}>{name}</a>
+          </a>
+        </Link>
+        <Link href="contact">
+          <a className={styles.push}>Contact</a>
+        </Link>
         <Link href="privacy">Privacy Policy</Link>
         <Link href="terms">Terms of Service</Link>
         <Link href="forms">Form Octopus</Link>
       </header>
       <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+
       <footer>
-        Built with ♥ by blueputty01 and powered by Next.js (along with ☕)
+        Built with ♥ by <Link href="github.com/blueputt01">blueputty01</Link>
+        Powered by Next.js (along with ☕)
       </footer>
     </div>
   );
