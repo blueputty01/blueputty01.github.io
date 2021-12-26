@@ -43,16 +43,6 @@ export default function Blog() {
           allowfullscreen
         ></iframe>
       </div>
-
-      <style jsx>{`
-        .blog-content {
-          display: flex;
-          flex: 100%;
-          flex-direction: column;
-          width: 50vw;
-          max-width: 50vw;
-        }
-      `}</style>
     </Layout>
   );
 }

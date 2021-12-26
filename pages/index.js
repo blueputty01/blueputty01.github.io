@@ -12,8 +12,8 @@ export default function Home() {
       </Head>
       <p>
         <i>
-          This site is a work in progress. Please be patient as content is
-          added.
+          This site is a work in progress. Please be patient as content and
+          functionality is added.
         </i>
       </p>
       <section>
@@ -29,7 +29,7 @@ export default function Home() {
         <Project
           desc="Coming soon: Integrates Google Forms quizzes and Google Spreadsheets for quick review"
           imgSrc="/images/project-thumbs/forms-128.png"
-          href=""
+          href="/forms"
         >
           Form Octopus
         </Project>
@@ -38,8 +38,13 @@ export default function Home() {
           imgSrc="/images/profile.png"
           href="/"
         >
-          This website
+          This site
         </Project>
+        <Project
+          desc="...and more on my GitHub"
+          imgSrc="/images/GitHub-Mark-120px-plus.png"
+          href="https://github.com/blueputty01"
+        ></Project>
       </section>
     </Layout>
   );

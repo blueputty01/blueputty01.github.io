@@ -8,7 +8,6 @@ const components = {
   h1: (props) => (
     <h1
       style={{
-        fontSize: "calc(1rem + 1.5vw)",
         color: "black",
         margin: "1vh 0 1vh 0",
       }}
@@ -19,7 +18,6 @@ const components = {
   p: (props) => (
     <p
       style={{
-        fontSize: "calc(1rem + 0.1vw)",
         color: "#000000e6",
         margin: "0vh 0 1vh 0",
       }}

@@ -74,7 +74,7 @@ export default function Layout({ children, home }) {
       <footer>
         <div className={styles.footerContainer}>
           <div className={styles.col}>
-            <h5>Form Butler</h5>
+            <h5>Form Octopus</h5>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
           </div>
