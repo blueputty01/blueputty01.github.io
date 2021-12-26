@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
@@ -9,10 +10,14 @@ export const siteTitle = "blueputty01";
 
 export default function Layout({ children, home }) {
   const router = useRouter();
+  const [scroll, setScroll] = useState(false);
 
-  function onScroll(e) {
-    console.log(e);
-  }
+  useEffect(() => {
+    // https://reactjs.org/docs/hooks-state.html
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 30);
+    });
+  }, []);
 
   function ActiveLink({ children, href, className }) {
     return (
@@ -43,7 +48,7 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <header onScroll={onScroll}>
+      <header className={scroll ? styles.shadow : ""}>
         <div className={styles.header}>
           <ul>
             <li>
