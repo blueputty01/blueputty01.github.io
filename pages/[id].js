@@ -47,8 +47,7 @@ export default function Blog({ postMetadata, postContent }) {
           display: flex;
           flex: 100%;
           flex-direction: column;
-          width: 50vw;
-          max-width: 50vw;
+          max-width: 80rem;
         }
       `}</style>
     </Layout>

@@ -84,7 +84,7 @@ export default function Layout({ children, home }) {
             <Link href="/terms">Terms</Link>
           </div>
         </div>
-        <div className={[styles.footerContainer, styles.foot].join(" ")}>
+        <div className={styles.footerContainer}>
           <p>Built with ♥ and ☕.</p>
         </div>
       </footer>
