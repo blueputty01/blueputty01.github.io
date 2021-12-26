@@ -6,6 +6,7 @@
 
 .header {
   max-width: 90rem;
+  padding: 1rem;
   margin: auto;
 }
 
@@ -13,6 +14,7 @@
   list-style: none;
   display: flex;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
