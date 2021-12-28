@@ -1,6 +1,7 @@
 import Layout from "../components/layout";
 import Head from "next/head";
 import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
 
 export default function Blog() {
   return (
@@ -10,9 +11,55 @@ export default function Blog() {
       </Head>
       <div>
         <div className={utilStyles.iconedTitle}>
-          <img src="/images/icons/forms-128.png" alt="" />
+          <img src="/images/form-octopus/icon-128.png" alt="" />
           <h1>Form Octopus</h1>
         </div>
+        <h2>Overview</h2>
+        <h2 className={utilStyles.normalWeight}>
+          Quickly review automatically generated multiple choice quizzes.
+        </h2>
+        <p>
+          Form Octopus automatically creates a Google Form based on the provided
+          key for a multiple choice quiz.
+        </p>
+        <p>
+          Then, Form Octopus generates a Google Spreadsheet to review students'
+          responses and identify the most difficult questions.
+        </p>
+        <h2>User Guide</h2>
+        <div className="step">
+          <h3>Step 1</h3>
+          <p>
+            Add a question for name. This is necessary for the spreadsheet.{" "}
+            Input the possible answer choices and the correct answer choices.
+          </p>
+          <p>
+            For example, a test with A being the correct answer for #1, C for
+            #2, and D for #3 would be input as ACD. The answer choices input
+            field describes the options for each question. For example, the
+            screenshot would result in each question having four choices: A, B,
+            C, and D.
+          </p>
+          <img src="images/form-octopus/step-1.png" alt="" />
+        </div>
+        <div className="step">
+          <h3>Step 2</h3>
+          <p>
+            Select "Add Section" to populate the Google From with questions.
+            Repeat as needed. You may use the built-in Google Form sections tool
+            if necessary.
+          </p>
+        </div>
+        <div className="step">
+          <h3>Step 3</h3>
+          <p>Select "Create Spreadsheet".</p>
+          <p>
+            You will be able to access the spreadsheet through the spreadsheet
+            icon found in the "responses" tab at the top of the page.
+          </p>
+          <img src="images/form-octopus/step-2.png" alt="" />
+        </div>
+        <h2>Video demonstration</h2>
         <iframe
           width="560"
           height="315"
@@ -22,7 +69,21 @@ export default function Blog() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-        <h2>About</h2>
+        <h2>Privacy</h2>
+        <p>
+          I value your privacy. Form Octopus itself does not store any data of
+          any kind. All data is read from and written directly to the Google
+          Form or Spreadsheet.
+        </p>
+        <p>
+          For more information, here's the{" "}
+          <Link href="/privacy">Privacy Policy</Link>.
+        </p>
+        <br />
+        <p>
+          Feel free to <Link href="/contact">reach out</Link> with
+          questions/concerns.
+        </p>
       </div>
     </Layout>
   );
