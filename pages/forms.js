@@ -30,7 +30,10 @@ export default function Blog() {
         <div className="step">
           <h3>Step 1</h3>
           <p>
-            Add a question for name. This is necessary for the spreadsheet.{" "}
+            In a blank Google Form, add a name question. This will allow the
+            formatted spreadsheet to have a name label next to each row.
+          </p>
+          <p>
             Input the possible answer choices and the correct answer choices.
           </p>
           <p>
@@ -60,15 +63,18 @@ export default function Blog() {
           <img src="images/form-octopus/step-2.png" alt="" />
         </div>
         <h2>Video demonstration</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube-nocookie.com/embed/OGqMW0DycNQ"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <div className={utilStyles.borderRadius}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/OGqMW0DycNQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
         <h2>Privacy</h2>
         <p>
           I value your privacy. Form Octopus itself does not store any data of
