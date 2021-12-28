@@ -1,29 +1,6 @@
 import Layout from "../components/layout";
 import Head from "next/head";
-
-const components = {
-  h1: (props) => (
-    <h1
-      style={{
-        fontSize: "calc(1rem + 1.5vw)",
-        color: "black",
-        margin: "1vh 0 1vh 0",
-      }}
-      {...props}
-    />
-  ),
-
-  p: (props) => (
-    <p
-      style={{
-        fontSize: "calc(1rem + 0.1vw)",
-        color: "#000000e6",
-        margin: "0vh 0 1vh 0",
-      }}
-      {...props}
-    />
-  ),
-};
+import utilStyles from "../styles/utils.module.css";
 
 export default function Blog() {
   return (
@@ -31,8 +8,11 @@ export default function Blog() {
       <Head>
         <title>Form Octopus</title>
       </Head>
-      <div className="blog-content">
-        <h1>Form Octopus</h1>
+      <div>
+        <div className={utilStyles.iconedTitle}>
+          <img src="/images/icons/forms-128.png" alt="" />
+          <h1>Form Octopus</h1>
+        </div>
         <iframe
           width="560"
           height="315"
@@ -42,6 +22,7 @@ export default function Blog() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+        <h2>About</h2>
       </div>
     </Layout>
   );

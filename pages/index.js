@@ -21,14 +21,14 @@ export default function Home() {
         <p>Here's some of my recent work:</p>
         <Project
           desc="Saves tabs for later"
-          imgSrc="/images/project-thumbs/tabs-aside-128.png"
+          imgSrc="/images/icons/tabs-aside-128.png"
           href=""
         >
           Tabs Aside
         </Project>
         <Project
           desc="Coming soon: Integrates Google Forms quizzes and Google Spreadsheets for quick review"
-          imgSrc="/images/project-thumbs/forms-128.png"
+          imgSrc="/images/icons/forms-128.png"
           href="/forms"
         >
           Form Octopus

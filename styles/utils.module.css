@@ -60,3 +60,13 @@
   display: flex;
   justify-content: center;
 }
+
+.iconedTitle {
+  display: flex;
+  align-items: center;
+}
+
+.iconedTitle > img {
+  height: 3rem;
+  margin-right: 1rem;
+}
