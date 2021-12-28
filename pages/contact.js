@@ -16,7 +16,7 @@ export default function Contact() {
       <Link href="https://github.com/blueputty01">
         <button>
           <img
-            src="/images/GitHub-Mark-120px-plus.png"
+            src="/images/github/icon-128.png"
             alt="GitHub Logo"
             width="30px"
             className="bob"

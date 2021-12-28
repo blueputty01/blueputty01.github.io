@@ -79,7 +79,11 @@ export default function Layout({ children, home }) {
       <footer>
         <div className={styles.footerContainer}>
           <div className={styles.col}>
-            <h5>Form Octopus</h5>
+            <Link href="/forms">
+              <a>
+                <h5>Form Octopus</h5>
+              </a>
+            </Link>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
           </div>
@@ -87,6 +91,11 @@ export default function Layout({ children, home }) {
             <h5>Tabs Aside</h5>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
+          </div>
+          <div className={styles.col}>
+            <h5>Contact</h5>
+            <Link href="https://github.com/blueputty01">GitHub</Link>
+            <Link href="mailto:blueputty01@gmail.com">Email</Link>
           </div>
         </div>
         <div className={styles.footerContainer}>

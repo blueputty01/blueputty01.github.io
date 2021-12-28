@@ -21,14 +21,14 @@ export default function Home() {
         <p>Here's some of my recent work:</p>
         <Project
           desc="Saves tabs for later"
-          imgSrc="/images/icons/tabs-aside-128.png"
+          imgSrc="/images/tabs-aside/icon-128.png"
           href=""
         >
           Tabs Aside
         </Project>
         <Project
           desc="Coming soon: Integrates Google Forms quizzes and Google Spreadsheets for quick review"
-          imgSrc="/images/icons/forms-128.png"
+          imgSrc="/images/form-octopus/icon-128.png"
           href="/forms"
         >
           Form Octopus
@@ -42,7 +42,7 @@ export default function Home() {
         </Project>
         <Project
           desc="...and more on my GitHub"
-          imgSrc="/images/GitHub-Mark-120px-plus.png"
+          imgSrc="/images/github/icon-128.png"
           href="https://github.com/blueputty01"
         ></Project>
       </section>

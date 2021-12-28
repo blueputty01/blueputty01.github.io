@@ -70,3 +70,7 @@
   height: 3rem;
   margin-right: 1rem;
 }
+
+.normalWeight {
+  font-weight: 400;
+}
