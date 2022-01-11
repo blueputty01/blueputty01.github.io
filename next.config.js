@@ -7,7 +7,7 @@ const mdx = require("@next/mdx")();
 
 module.exports = nextOptimizedImages(
   mdx({
-    pageExtensions: ["js", "jsx", "mdx"],
+    pageExtensions: ["js", "jsx", "tsx", "mdx"],
     basePath: ghPages ? basePath : "",
     assetPrefix: ghPages ? basePath : "",
   })
