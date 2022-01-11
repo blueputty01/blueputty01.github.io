@@ -22,7 +22,7 @@ export default function Home() {
         <Project
           desc="Saves tabs for later"
           imgSrc="/images/tabs-aside/icon-128.png"
-          href=""
+          href="https://chrome.google.com/webstore/detail/tabs-aside/nboikgnmjgjcnnhencinblbaikdccdlb?hl=en"
         >
           Tabs Aside
         </Project>
