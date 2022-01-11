@@ -2,7 +2,7 @@ import styles from "./card.module.css";
 import Link from "next/link";
 
 interface ProjectProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   imgSrc?: string;
   desc?: string;
   href?: string;
