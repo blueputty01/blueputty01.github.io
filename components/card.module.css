@@ -10,7 +10,7 @@
 }
 
 .card:hover {
-  background-color: hsl(212, 80%, 95%);
+  background-color: hsl(212, 30%, 95%);
   text-decoration: none;
 }
 
